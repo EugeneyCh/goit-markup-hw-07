@@ -1302,7 +1302,7 @@ label {
 }
 .greetings {
   position: absolute;
-  top: 300px;
+  top: 274px;
   left: 50%;
   transform: translateX(-50%);
 }
