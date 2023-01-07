@@ -394,7 +394,7 @@ ul {
 }
 .modal {
   position: absolute;
-  min-width: 408px;
+  max-width: 408px;
   height: 576px;
   top: 50%;
   left: 50%;
@@ -1052,11 +1052,7 @@ label {
     }
   }
   .modal {
-    position: absolute;
-    height: 579px;
-    max-height: 90vh;
-    min-width: 392px;
-    overflow-y: scroll;
+    /* position: absolute; */
   }
   .mobile-menu-contacts-list .link {
     color: var(--brand-color);
@@ -1335,7 +1331,21 @@ label {
   .mobile-menu-contacts-list .link {
     font-size: 26px;
   }
-  .mail.link{
+  .mail.link {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 1198px) {
+  .modal {
+    display: block !important;
+    height: 579px;
+    max-height: 90vh;
+    max-width: 90vw;
+    width: 392px;
+    overflow: auto;
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+
   }
 }
