@@ -26,7 +26,7 @@ body {
   margin: 0 auto;
   /* margin-left: 16px;
   margin-right: 16px; */
-  /* padding: 0 15px; */
+  padding: 0 15px;
 }
 
 p {
@@ -110,8 +110,8 @@ ul {
 }
 
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
+  min-height: 24px;
+  min-width: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,7 +120,7 @@ ul {
   padding: 0;
   background-color: transparent;
   cursor: pointer;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   outline: none;
 }
@@ -144,7 +144,10 @@ ul {
   height: 100vh;
   padding: 32px;
   background-color: #fff;
-  z-index: 999;
+  z-index: 999; 
+  min-height: 564px;
+  overflow-y: scroll;
+
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -204,12 +207,12 @@ ul {
   text-decoration: none;
   font-size: 36px;
   line-height: 1.11;
-  font-family: var(--prime-font-family);
   font-weight: 700;
   padding: 0;
 }
 
 .mobile-menu-contacts-list .mail {
+  font-family: var(--prime-font-family);
   font-size: 20px;
   line-height: 1.2;
   font-weight: 500;
@@ -385,6 +388,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visability 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1052,6 +1056,13 @@ label {
     position: absolute;
     min-width: 392px;
     min-height: 586px;
+    overflow: scroll;
+  }
+  .mobile-menu-contacts-list .link{
+    color: var(--brand-color);
+  }
+  .mail.link{
+    color: var(--prime-text-color);
   }
   .body {
     min-width: 320px;
@@ -1071,7 +1082,8 @@ label {
     font-weight: 700;
   }
   .container {
-    width: 428px;
+   width: 100vw;
+    max-width: 428px;
   }
   .header-item {
     justify-content: space-between;
@@ -1082,8 +1094,11 @@ label {
   .contacts-list {
     display: none;
   }
+  .menu-container > .traling-icon{
+    gap: 10vw;
+  }
   .header-item {
-    width: 428px;
+    /* width: 428px; */
     height: 70px;
   }
   .advantage {
@@ -1128,7 +1143,7 @@ label {
   }
   .customers-block li {
     width: 190px;
-    margin: 72px 16px 0;
+    /* margin: 72px 16px 0; */
   }
 
   .customers-block li:nth-of-type(2n + 2) {
@@ -1139,6 +1154,8 @@ label {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 16px;
   }
   .customers-area {
     padding-bottom: 96px;
@@ -1162,8 +1179,8 @@ label {
     text-align: center;
   }
   .subscribe {
-    width: 396px;
-    height: 136px;
+    width: 268px;
+    height: 110px;
     margin: 72px auto 0;
   }
   .label-subscribe {
@@ -1182,7 +1199,7 @@ label {
 
 /* =================== TABLET================== */
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -1203,8 +1220,10 @@ label {
   }
   .container {
     width: 768px;
-    padding-left: 16px;
-    padding-right: 16px;
+    margin: 0;
+
+    /* padding-left: 16px;
+    padding-right: 16px; */
   }
   .header-item {
     /* width: 768px; */
@@ -1254,9 +1273,9 @@ label {
     margin: 0;
   }
   .rank-three {
-    font-size: 36px;
-    line-height: 1.11;
-    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 500;
   }
   .products {
     display: none;
@@ -1282,6 +1301,7 @@ label {
     font-weight: 700;
   }
   .customers-block {
+    justify-content: center;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
@@ -1289,6 +1309,15 @@ label {
   .customers-area {
     padding-bottom: 96px;
   }
+  .logo-box {
+    padding-left: 93px;
+  }
+  .label-subscribe {
+    /* display: flex;
+    width: 100%; */
+    height: 40px;
+  }
+
   .logo-box {
     height: 110px;
     margin-right: 24px;
@@ -1298,11 +1327,7 @@ label {
   }
   .subscribe {
     margin-left: 0;
+    margin-top: 72px;
+    padding-left: 93px;
   }
-}
-.greetings {
-  position: absolute;
-  top: 274px;
-  left: 50%;
-  transform: translateX(-50%);
 }
