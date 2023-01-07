@@ -145,7 +145,7 @@ ul {
   padding: 32px;
   background-color: #fff;
   z-index: 999;
-  min-height: 564px;
+  min-height: 540px;
   overflow-y: scroll;
 
   transform: translateX(100%);
@@ -395,7 +395,7 @@ ul {
 .modal {
   position: absolute;
   min-width: 408px;
-  min-height: 576px;
+  height: 576px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1053,9 +1053,10 @@ label {
   }
   .modal {
     position: absolute;
+    height: 579px;
+    max-height: 90vh;
     min-width: 392px;
-    min-height: 586px;
-    overflow: scroll;
+    overflow-y: scroll;
   }
   .mobile-menu-contacts-list .link {
     color: var(--brand-color);
