@@ -144,10 +144,9 @@ ul {
   height: 100vh;
   padding: 32px;
   background-color: #fff;
-  z-index: 999; 
+  z-index: 999;
   min-height: 564px;
   overflow-y: scroll;
-
 
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
@@ -1058,10 +1057,10 @@ label {
     min-height: 586px;
     overflow: scroll;
   }
-  .mobile-menu-contacts-list .link{
+  .mobile-menu-contacts-list .link {
     color: var(--brand-color);
   }
-  .mail.link{
+  .mail.link {
     color: var(--prime-text-color);
   }
   .body {
@@ -1082,7 +1081,7 @@ label {
     font-weight: 700;
   }
   .container {
-   width: 100vw;
+    width: 100vw;
     max-width: 428px;
   }
   .header-item {
@@ -1094,7 +1093,7 @@ label {
   .contacts-list {
     display: none;
   }
-  .menu-container > .traling-icon{
+  .menu-container > .traling-icon {
     gap: 10vw;
   }
   .header-item {
@@ -1329,5 +1328,13 @@ label {
     margin-left: 0;
     margin-top: 72px;
     padding-left: 93px;
+  }
+}
+@media screen and (max-width: 478px) {
+  .mobile-menu-contacts-list .link {
+    font-size: 26px;
+  }
+  .mail.link{
+    font-size: 20px;
   }
 }
